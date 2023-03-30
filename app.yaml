@@ -1,0 +1,15 @@
+runtime: python39
+
+handlers: 
+- url: /.*
+  script: auto 
+
+entrypoint: gunicorn -b :$PORT main:app
+
+#manual_scaling:
+#  instances: 5
+#resources:
+#  cpu: 2
+#  memory_gb: 1
+#  disk_size_gb: 10
+

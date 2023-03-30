@@ -1,0 +1,7 @@
+DB_USER: 'root'
+DB_PASSWORD: 'Inquistivepizza@55'
+DB_HOST: 'localhost'
+DB_NAME: 'insuranceapp'
+DB_PORT: '3306'
+CONN_NAME: 'splendid-cirrus-379704:asia-south1:insurancedb'
+
