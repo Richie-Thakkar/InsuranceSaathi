@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/loginstyles.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-InsuranceSaathi</title>
+</head>
+<body class=bgclr>
+    
+<h1 align = center style="font-size: 5vh;">
+InsuranceSaathi
+</h1>
+<h2 align="center" style="color: white;font-weight: lighter;"><b>Ensuring your future dreams</b></h2>
+<br><br>
+<h2 style="color: white;text-align: center;">
+Welcome to InsuranceSaathi  
+</h2>
+<div align = center class="makebox">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-{{ message[0] }}">
+        {{ message }}
+    </div>
+{% endfor %}
+
+    <form action="" method="POST">
+<strong>Login</strong>
+<br><br><br>
+Username
+<input type="text" name="username" required >
+<br><br>
+Password
+<input type="password" name="password" required>
+<br><br><button class="button:hover button" type="submit">Sign in</button><br>
+New here?
+</form>
+<a href="{{ url_for('signup') }}"><button class="button:hover button" type="submit">Sign up for free</button></a><br>
+</div>
+</body>
+</html>

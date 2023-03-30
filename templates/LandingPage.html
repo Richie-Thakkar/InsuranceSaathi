@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <script src="{{ url_for('static', filename='utils/Landingpageutils.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurancesaathi</title>
+</head>
+<body>
+    <section id="intro">
+        <br>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('Insuranceprod') }}">Insurance Products</a></li>
+                <li><a href="{{ url_for('Renew') }}">Renew your policy</a></li>
+                <li><a href="{{ url_for('AboutUs') }}">About Us</a></li>
+                <li><a href="{{ url_for('ContactUs') }}">Contact Us</a></li>
+                <li class="dropdown"><a>My Account</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('profile') }}">My Profile</a>
+                        <a onclick="givegreeting()" href="{{ url_for('logout') }}">Sign Out</a>
+                        </div>
+                </li>  
+            </ul>
+        </nav>
+<img src="https://cdn.pixabay.com/photo/2021/10/07/15/23/real-estate-6688945_1280.jpg" alt="Insurance Saathi Logo" id="logo">
+<br><br><br>
+<section id="int">
+   <h2 align="center">Welcome to InsuranceSaathi<br>A one stop solution for all your insurances</h2>
+    <img src="https://cdn.pixabay.com/photo/2017/02/17/08/11/family-2073604_1280.png" id="image">
+</section>
+    </section>
+    <section id="services">
+        <br>
+     <h2 align="center">Our Services</h2>  
+     <article>
+<figure><a href ="{{ url_for('Insuranceprod') }}"><img src="https://cdn.pixabay.com/photo/2020/04/23/04/02/protection-5080948__480.jpg" class="serv"><figcaption>Health Insurance</a></figcaption></figure>
+<figure><a href ="{{ url_for('Insuranceprod') }}"><img src="https://cdn.pixabay.com/photo/2017/08/16/15/52/puzzle-pieces-2648213__340.jpg" class="serv"><figcaption>Home Insurance</a></figcaption></figure>
+<figure><a href ="{{ url_for('Insuranceprod') }}"><img src="https://cdn.pixabay.com/photo/2017/01/18/23/49/insurance-1991212__340.jpg"class="serv"><figcaption>Vehicle Insurance</a></figcaption></figure>
+<figure><a href ="{{ url_for('Insuranceprod') }}"><img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=600"class="serv"><figcaption>Travel Insurance</a></figcaption></figure>
+     </article> 
+    </section><br>
+    <section id="textbox">
+        <div>
+            You dont buy insurance because you are going to die, but because those you love are going to live.<br>
+        </div>
+    </section><br>
+    <section class="cls">
+        <h2 style="margin-left: 10vh;"><u>Why InsuranceSaathi?</u></h2>
+        <p class="whyus">
+            When you buy insurance from us, you get more than just financial safety.You also get our promise of simplifying complex insurance terms and conditions, quick stress-free claims, instant quotes from top insurers and being present for you in the toughest of times.
+            <br><a style="color: blue; font-size:0.9em;" href="{{ url_for('AboutUs') }}">Know more</a>
+        </p>
+        <p class="whyus">
+        <img class="decoimg" src="https://cdn.pixabay.com/photo/2020/05/30/12/56/insurance-5238829__480.jpg">
+        <img class="decoimg" src="https://cdn.pixabay.com/photo/2016/04/18/22/05/insurance-1337564__480.png">
+    </p>    
+    </section>
+    <section id="contactus">
+        <div id="contactbox">
+<p>Call to Action! It's time!!<br>Get your insurance now</p><br>
+<button type="submit" id="btn"><a style="text-decoration: none; color: black" href="{{ url_for('Insuranceprod') }}">Get Insured</a></button>
+        </div>
+    </section>
+    <footer>
+        <p><a href="https://www.linkedin.com/in/richie-thakkar-5a722a206/" target="_blank">Copyright &copy; Richie Thakkar</a><br></p> 
+    </footer>
+</body>
+</html>

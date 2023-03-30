@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/signupstyles.css') }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <title>InsuranceSaathi-Update Profile</title>
+</head>
+<body>
+  <h1 align="center" style="color: white;">Update the details 
+    <hr>
+  </h1>
+  <h3 align="center" style="color: white;">InsuranceSaathi<br>Protecting the "Never Know" Situation</h3>
+  <form onsubmit="verifyPassword()" action="" method="POST">
+    <br><br>
+    <div class="makebox" align="center">
+      {% for message in get_flashed_messages() %}
+    <div class="alert alert-{{ message[0] }}">
+        {{ message }}
+    </div>
+{% endfor %}
+First Name*<br><input type="text" name="fname" value="{{personal_details['fname']}}" placeholder="Update your first name" ><br><br> 
+Middle Name*<br><input type="text" name="mname" value="{{personal_details['mname']}}" ><br><br>
+Last Name*<br><input type="text" name="lname" value="{{personal_details['lname']}}" ><br><br>
+DOB*<br><input type="date" name="dob" value="{{personal_details['dob']}}"><br><br>
+Phone Number*<br><input type="number" name="phone" value="{{personal_details['phone']}}" ><br><br>
+Email id*<br><input type="email" name="email" value="{{personal_details['email']}}" ><br><br>
+User Name*<br><input type="text" name="username" value="{{personal_details['username']}}" ><br><br>
+<button type="submit" class="button">Update</button><br>
+<button type="submit" class="button"><a href="{{ url_for('LandingPage') }}">Home</a></button>
+</div>
+</form>
+</body>
+
+</html>

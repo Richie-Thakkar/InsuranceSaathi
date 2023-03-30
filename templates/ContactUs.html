@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>InsuranceSaathi ContactUs</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/custyles.css') }}">
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We would love to respond you and solve your queries. Feel free to contact us</p>
+                <div class="contact-box">
+                    <div class="contact-left">
+                        <h3>Send your request</h3>
+                        <form onsubmit="return false">
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label >Name</label>
+                                    <input type="text" placeholder="Enter your name here" id="name" required>
+                                </div>
+                                <div class="input-group">
+                                    <label >Phone</label>
+                                    <input type="text" placeholder="Enter your contact number(optional)" id="ph" >
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label >Email</label>
+                                    <input type="email" placeholder="Enter your email id(optional)" id="em" >
+                                </div>
+                                <div class="input-group">
+                                    <label >Subject</label>
+                                    <input type="text" placeholder="Enter your Query" id="qry" required>
+                                </div>
+                            </div>
+                            <label >Message</label>
+                            <textarea  rows="5" placeholder="Enter a brief description about your query" id="desc"></textarea>
+                            <button type="submit" onclick="sendmail()">SEND</button>
+                            <a href="{{ url_for('LandingPage') }}" class="previous">&laquo; Go to Home Page</a>
+                        </form>
+                    </div>
+                    <div class="contact-right">
+                        <h3>Reach Us</h3>
+                        <table>
+                            <tr>
+                                <td>Email</td>
+                                <td>contactus@insurancesaathi.com</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>+91 1800 234 567 8901</td>
+                            </tr>
+                        </table>
+                       
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+        <footer>
+            <p><a href="https://www.linkedin.com/in/richie-thakkar-5a722a206/" target="_blank" style="text-decoration: none;color: white;">Copyright &copy; Richie Thakkar</a><br></p> 
+        </footer>
+    </body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="{{ url_for('static', filename='utils/cuutils.js') }}"></script>
+    
+
+
+</html>

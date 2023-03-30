@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/profilestyles.css') }}">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile-InsuranceSaathi</title>
+</head>
+<body>
+    <header style="margin-top: 4vh;">
+        <button type="submit" class="btn"><a href="{{url_for('LandingPage')}}" >Back to home page</button></a>
+        <h1 align="center">My Profile</h1>
+    </header>
+    <hr>
+    <section class="makebox">
+<div>
+<br>
+<b>First Name:<br>
+{{personal_details['fname']}} 
+<br><br>Middle Name:<br>
+ {{personal_details['mname']}} 
+<br><br>Last Name:<br>
+ {{personal_details['lname']}}
+<br><br>Date of Birth:<br>
+{{personal_details['dob']}}
+<br><br>Phone No.:<br>
+{{personal_details['phone']}}
+<br><br>Email:<br>
+{{personal_details['email']}}
+<br><br>Username:<br>
+{{personal_details['username']}}
+</b><br><br>
+<a href="{{url_for('Updateform')}}" style="background-color: white;"><button class="btn">Update Profile details</button></a>
+</div>
+</section>
+<footer>
+    <p style="background-color: #1f2937;">Copyright &copy; <a href="https://www.linkedin.com/in/richie-thakkar-5a722a206/" target="_blank">Richie Thakkar</a><br></p> 
+</footer>
+</body>
+</html>

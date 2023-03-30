@@ -1,0 +1,40 @@
+.bgclr{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(40, 98, 156);
+    overflow: hidden;
+    } 
+    
+    .makebox
+    {
+    background-color: rgba(255, 255, 255, 0.627);    
+    width: 20vmax;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: auto;
+    padding: 10px;
+    }
+    .button:hover{
+    background-color: aqua;
+    transition: all 0.2s ease-in-out;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(165, 148, 148, 0.315), 0 17px 50px 0 rgba(165, 148, 148, 0.315);
+    cursor: pointer;
+    }
+    .button
+    {
+    font-size: 14px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    }
+    h1
+    {
+    color: white;
+    }
+    #ur{
+    font-size: 14px;
+    }
+    #pw{
+    font-size: 14px;
+    }
